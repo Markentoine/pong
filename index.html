@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pong Game</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./player.js"></script>
+    <script src="./score.js"></script>
+    <script src="./ball.js"></script>
+    <script src="./paddle.js" defer></script>
+    <script src="./board.js" defer></script>
+    <script src="./game.js" defer></script>
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <header>MYPONG</header>
+    <main>
+        <button id="start">START</button>
+        <canvas id="board" width="300" height="300">
+            You must update your browser to see the content.
+        </canvas>
+        <div class="scores">
+            <div class="scoreBox">
+                <div class="score">P1</div>
+                <div class="score" id="score1">0</div>
+                <div class="score">-</div>
+                <div class="score" id="score2">0</div>
+                <div class="score">P2</div>
+            </div>
+        </div>
+    </main>
+    <div class="players">
+        <label class="player" for="player1" id="typePlayer1">
+            <p>HUMAN</p>
+            <div class="choosePlayer">
+                <input type="checkbox" id="player1">
+                <span class="slider" id="slider1"></span>
+            </div>
+            <p>BOT</p>
+        </label>
+
+        <div id="keys1">UP: Q & DOWN: W</div>
+        <div id="keys2">UP: M & DOWN: /</div>
+
+        <label for="player2" class="player" id="typePlayer2">
+            <p>HUMAN</p>
+            <div class="choosePlayer">
+                <input type="checkbox" id="player2" checked>
+                <span class="slider" id="slider2"></span>
+            </div>
+            <p>BOT</p>
+        </div>
+    </div>
+    <footer>created by JVTOULOUSE</footer>
+</body>
+</html>

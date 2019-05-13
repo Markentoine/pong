@@ -1,0 +1,155 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+*:before,
+*:after,
+* {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+main {
+    display: flex;
+    border: 2px solid red;
+}
+
+button {
+    width: 5vw;
+    border: none;
+    font-size: 1.1rem;
+    background-color: white;
+    text-align: center;
+}
+
+button:hover,
+button:focus {
+    cursor: pointer;
+    background-color: green;
+}
+
+button:active {
+    background-color: red;
+}
+
+#board {
+    width: 70vw;
+    height: 80vh;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+}
+
+.scores {
+    height: 80vh;
+    width: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.scoreBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: space-around;
+    width: 50%;
+    height: 50%;
+}
+
+.score {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.players {
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+}
+
+.choosePlayer {
+    position: relative;
+    border: 1px solid blue;
+    margin: .5rem .5rem;
+    width: 4rem;
+    height: 2rem;
+}
+
+input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+input:checked + #slider1 {
+    background-color: violet;
+}
+
+input:checked + #slider2 {
+    background-color: red;
+}
+
+input:checked + .slider:before {
+    transform: translateX(1.9rem);
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    outline: 1px solid violet;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: green;
+    transition: .4s;
+}
+
+#slider2 {
+    background-color: blue;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    left: .2rem;
+    bottom: .2rem;
+    background-color: white;
+    transition: .4s;
+}
+
+#keys1 {
+    margin-right: 6rem;
+}
+
+#keys2 {
+    margin-left: 6rem;
+}
+
+
+
+footer {
+    font-size: .5rem;
+}
